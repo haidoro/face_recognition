@@ -84,6 +84,8 @@ virtualenv face_recognition
 
 ここはよく失敗するので注意。
 
+#### Mac環境での仮想環境に入り方
+
 要は`virtualenv`で作成した環境名のフォルダ内にbinフォルダが作成されます。binフォルダ内にactivateファイルがあるのでそれを実行すれば良いのです。
 
 ```python
@@ -95,6 +97,20 @@ source bin/activate
 ```python
 deactivate
 ```
+
+### Windows環境での仮想環境に入り方
+
+```python
+Scripts\activate
+```
+
+現在の仮想環境から出るには次のコード。
+
+```python
+Scripts\deactiv
+```
+
+
 
 ### ライブラリのインストール
 
@@ -113,6 +129,38 @@ pip install cmake
 ```
 pip install face_recognition
 ```
+
+#### Windowsではface_recognitionのインストールに失敗します
+
+2020年5月現在
+
+Windowsの場合、face_recognitionのインストールする前に、次の環境を作る必要があります。
+
+Visual Studio 2019のページの「Visual Studio のダウンロード」ボタンから「vs_buildtools__.exe」ファイルをダウンロードします。（\*部分に番号が入っています。）
+
+
+
+ダウンロードしたファイルをインストールすると、Visual Studio Installerが使えるようになります。
+
+![](https://itstudio.co/sample/images/vsinst.jpg)
+
+[変更]を選ぶと次のようなメニューがあります。
+
+この中のC++ Build Toolsにチェックを入れて実行すると環境が出来上がります。
+
+![](https://itstudio.co/sample/images/vsinst2.jpg)
+
+
+
+その後次のインストールを行うとうまくいきます。
+
+```
+pip install face_recognition
+```
+
+
+
+
 
 ### 画像の準備
 
